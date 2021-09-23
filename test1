@@ -1,0 +1,365 @@
+/* MAIN CSS */
+/*RESET*/ 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #009eff;
+}
+
+/*Grunden*/
+html {
+    font-size: 14px;
+}
+
+body {
+    font-size: 1rem;  
+    line-height: 1.5;
+    font-family: 'Karla', sans-serif;
+    background-color:white;
+    
+}
+
+h1 {
+    font-size: 3rem; 
+    color:crimson;
+}
+
+h2 {
+    font-size: 1.5rem; 
+
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family:  'Spectral', serif;
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+p,
+img {
+    margin-bottom: .5em;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var( --primary-color );
+}
+
+
+
+
+/** SITE HEADER **/
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr 1rem;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+    
+        " L B "
+        " M M "
+    ;
+    
+    align-items: bottom;
+    padding: 1rem;
+    background-color:ghostwhite
+    
+}
+
+
+/* BRAND */
+.brand {
+    grid-area: L;
+}
+.brand-link {
+    color: #000000;
+    text-decoration:black;
+    font-size: 3rem;
+}
+/** SITE NAVIGATION **/
+.site-navigation {
+   
+    display: none;
+}
+/* Toggle Button */
+.toggle-btn {
+    grid-area: B;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    padding: 0 .5em;
+    background-color: darkred;
+    cursor: pointer;
+
+}
+
+.toggle-btn .bars,
+.toggle-btn .bars::before,
+.toggle-btn .bars::after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:grey;
+}
+.toggle-btn .bars::before,
+.toggle-btn .bars::after {
+    content: '';
+}
+
+.toggle-btn .bars::before {
+    position: relative;
+    top: -15px;
+}
+
+.toggle-btn .bars::after {
+    position: relative;
+    top: 8px;
+}
+
+/* Checkbox */
+.toggle-menu {
+    display: none;
+} 
+.toggle-menu:checked + .site-navigation {
+    display: block;
+}
+
+
+table {
+    margin: 1;
+    /* display: block; */
+    
+    border: 1px solid #ccc;
+}
+tr {
+    background-color:wheat;
+    border-bottom: 1px solid #ccc;
+}
+tr:nth-of-type(odd) {
+    background-color: #ddd;
+}
+
+th,
+td {
+    min-width: 100px;
+    padding: .5em;
+    text-align: left;
+    border-right: 1px solid #ccc;
+    vertical-align: center;
+}
+
+
+
+
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction:column;
+    
+    
+}
+
+
+   
+.menu-item a {
+    display:list-item;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    color: white;
+    background-color:lightcoral;
+    margin: .5rem;
+    
+    
+  
+}
+.menu-item.active a {
+    background-color: wheat;
+}
+.menu-item a:hover {
+    color: #000;
+    background-color:white;
+    
+    
+}
+
+
+/** IMAGE CONTENT **/
+.image-content {
+    flex-direction:row;
+    padding: 1rem;
+    max-width: 1100px; 
+    margin: auto;
+    border-bottom: 1px solid #000;
+    display: flex;
+    
+}
+.image-content:nth-of-type(odd) {
+    background-color: #eee;
+}
+
+.image-content .image {
+    margin-right: 2em;
+}
+.image-content:nth-of-type(2n) .image {
+    margin-left: 2em;
+    margin-right: 0;
+    order: 2;
+    
+}
+
+
+
+
+.image-content .content {
+    padding: 0;
+    border: 0;
+}
+
+/*SIDFOTEN*/
+
+.site-footer {
+    background-color:ghostwhite;
+    padding: 2rem; 
+}
+.site-footer a {
+    color: black;
+
+}
+
+.site-footer .grid-container {
+    display: grid; 
+    gap: 1em;
+}
+
+.social-links {
+    display: flex;
+    margin-left: -1em;
+}
+
+.social-links a {
+    padding: 1em;
+    text-decoration: none;
+}
+
+.social-links i {
+    margin-right: 1em;
+}
+
+
+
+.topnav {
+
+    background-color: #e9e9e9;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 5px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 24px;
+  }
+
+
+
+
+
+
+
+
+  
+
+/** FEATURES **/
+.features {
+    padding: 2em 1em;
+}
+.checked {
+    color: orange;
+  }
+
+.card {
+    /* display: flex;
+    flex-direction: column; */
+
+    background-color: #eee;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+
+/* GOOGLE KARTA */
+.google-map {
+    width: 100%;
+    height: 40vh;
+}
+
+
+/* All CSS (mobile first) */
+
+/* brytpunkt Tablet */
+
+
+/* brytpunkt Laptop */
+@media (min-width:992px){
+
+}
+
+/* brytpunkt Desktop */
+@media (min-width:1200px){
+    
+}
