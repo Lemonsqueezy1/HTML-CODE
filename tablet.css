@@ -1,0 +1,17 @@
+/*** TABLET***/
+html {
+    font-size: 18px;
+}
+
+/** FEATURES **/
+
+.flex-container {
+    display: flex;
+}
+.card {
+    flex-basis: 100%;
+}
+.card + .card {
+    margin-left: 1em;
+}
+
